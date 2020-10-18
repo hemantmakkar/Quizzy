@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="quizzy.png" type="image/x-icon">
+
+    <title>Quizzy</title>
+</head>
+
+<body onload="loadLogin()">
+    <header class="header">
+        <img src="quizzy.png" alt="Quizzy Image" class="header__logo">
+        <h2 class="header__text">Quizzy</h2>
+    </header>
+
+    <div class="container">
+
+        <!-- Login Page -->
+
+        <div class="login">
+            <h3 class="login__text">USER LOGIN</h3>
+            <form class="login__form" onsubmit="return false;">
+                <input type="text" placeholder="Enter username" class="login__field" id="username">
+                <input type="password" placeholder="Enter password" class="login__field" id="password">
+            
+                <button type="submit" class="btn" onclick="validateUser()">LOGIN</button>
+            </form>
+        </div>
+
+        <!-- Rules Page -->
+
+        <div class="rules">
+
+            <div class="rules__text">
+                <h3 class="rules__heading">RULES</h3>
+                <p class="rules__p">1. Quiz will contain total 20 questions.</p>
+                <p class="rules__p">2. One point will be awarded for each correct answer.</p>
+                <p class="rules__p">3. No half marks will be awarded.</p>
+                <p class="rules__p">4. Each question has 4 options.</p>
+                <p class="rules__p">5. Do not refresh the page.</p>
+                <p class="rules__p">6. Final score will be shown after submission of quiz.</p>
+            </div>
+
+            <div class="rules__agreement">
+                <input type="checkbox" name="accept" id="accept">
+                <label for="accept"> I agree!</label>
+                <button type="submit" class="btn" onclick="startQuiz()">Start Quiz</button>
+            </div>
+
+        </div>
+
+        <!-- Quiz starts here -->
+
+        <div class="quiz">
+            <div class="quiz__que">
+                <p class="que">Q1. What is the scientific name of a butterfly?</p>
+            </div>
+
+            <div class="que__ans">
+                <label class="option" onclick="showAnswer(this)">
+                    <input type="radio" id="radio-0" class="input-check">
+                    <span class="checkmark" id="opt1">Apis</span>
+                </label>
+                <label class="option" onclick="showAnswer(this)">
+                    <input type="radio" id="radio-1" class="input-check">
+                    <span class="checkmark" id="opt2">Coleoptera</span>
+                </label>
+                <label class="option" onclick="showAnswer(this)">
+                    <input type="radio" id="radio-2" class="input-check">
+                    <span class="checkmark" id="opt3">Formicidae</span>
+                </label>
+                <label class="option" onclick="showAnswer(this)">
+                    <input type="radio" id="radio-3" class="input-check">
+                    <span class="checkmark" id="opt4">Rhopalocera</span>
+                </label>
+            </div>
+
+            <div class="correct__ans">
+                <p class="cor__ans"></p>
+            </div>
+
+            <div class="buttons">
+                <button type="submit" class="btn" id="previous" onclick="prev()">Prev</button>
+                <button type="submit" class="btn" id="next" onclick="next()">Next</button>
+            </div>
+        </div>
+
+        <div class="result">
+            <div class="result__1">
+                <p class="result__score">Your Result is: 100%</p>
+            </div>
+
+            <div class="result__2">
+                <p class="questions">Total number of Questions: 20</p>
+                <p class="wrong__que">Total number of Wrong Answer: 0</p>
+                <p class="correct__que">Total number of Correct Answer: 20</p>
+            </div>
+
+            <div class="result__res">
+                <p class="result__res-1">Excellent Job!! You are doing Great.</p>
+            </div>
+
+            <div class="quiz__analysis">
+                <p class="quiz__anal">Quiz Analysis</p>
+
+                <table class="quiz__table">
+                    <tr>
+                        <th>Q.No.</th>
+                        <th>User Answer</th>
+                        <th>Marks Alloted</th>
+                    </tr>
+                    
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; Copyright 2020</p>
+        <p class="footer__text">All rights reserved by Hemant Makkar</p>
+    </footer>
+
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

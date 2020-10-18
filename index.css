@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 60.3%;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    width: 5rem;
+    margin: 2rem;
+}
+
+.header__text {
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.container {
+    min-height: 65rem;
+    background-color: aquamarine;  
+    text-align: center;
+}
+
+.login {
+    display: none;
+    background-color: pink;
+    text-align: center;
+    margin-top: 15rem;
+    border: 3px solid #fff;
+}
+
+.login__text {
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 2.5rem 0;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__field {
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: 1.7rem;
+    width: 50rem;
+    height: 4rem;
+    margin: 1rem;
+}
+
+.login__field:focus {
+    outline: none;
+}
+
+.btn {
+    border-radius: 10rem;
+    border: none;
+    cursor: pointer;
+    padding: 1.3rem 3rem;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    transition: all .2s;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.rules {
+    display: none;
+    /* padding: 2rem; */
+    background-color: pink;
+    text-align: start;
+    margin-top: 11rem;
+    border: 3px solid #fff;
+}
+
+.rules__text {
+    padding: 2rem;
+}
+
+.rules__heading {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.rules__p {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.rules__agreement {
+    padding: 2rem;
+    background-color: palevioletred;
+    font-size: 1.5rem;
+}
+
+.rules__agreement input {
+    cursor: pointer;
+    height: 1.3rem;
+}
+
+.rules__agreement button {
+    margin: 0 0 0 1rem;
+}
+
+.quiz {
+    display: none;
+    background-color: pink;
+    text-align: start;
+    margin-top: 11rem;
+    border: 3px solid #fff;
+    width: 40%;
+    font-size: 1.7rem;
+}
+
+.quiz__que {
+    padding: 2rem;
+    background-color: palevioletred;
+    
+}
+
+.que__ans label {
+    display: block;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+.correct__ans {
+    background-color: #f3a3be;
+    padding: 1.5rem;
+    margin-top: 1rem;
+    display: none;
+}
+
+.result {
+    display: none;
+    background-color: pink;
+    width: 50%;
+    text-align: start;
+    border: 3px solid #fff;
+    font-size: 1.5rem;
+}
+
+.result__1 {
+    padding: 1.5rem;
+    background-color: palevioletred;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.result__2 {
+    padding: 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.result__res {
+    padding: 1.5rem;
+    background-color: palevioletred;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.quiz__analysis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    
+
+.quiz__anal {
+    margin: 2rem 0;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-weight: 500;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.count_users {
+    font-size: 1.3rem;
+    text-align: end;
+}
+
+.footer {
+    background-color: #f3a3be;
+    width: 100%;
+}
+
+.footer__text {
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .login__field {
+        width: 40rem;
+    }
+
+    .quiz {
+        width: 80%;
+        font-size: 1.7rem;
+    }
+
+    .result {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .login__field {
+        width: 90%;
+    }
+}
